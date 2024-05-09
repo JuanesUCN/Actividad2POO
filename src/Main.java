@@ -11,7 +11,6 @@ public class Main {
 
         while (Opcion == 0) {
 
-            System.out.println("\033[H\033[2J");
             System.out.flush();
 
             System.out.println("Menu de inicio");
