@@ -3,13 +3,38 @@ public class Jugador
     private int IdJugador;
     private String Nombre;
     private String Apellido;
-    private String Edad;
+    private int Edad;
 
-    public Jugador(int idjugador, String nombre, String apellido, String edad)
+    public Jugador()
     {
-        this.IdJugador = idjugador;
-        this.Nombre = nombre;
-        this.Apellido = apellido;
-        this.Edad = edad;
     }
+
+    //      SETTER
+
+    public void SetIdJugador(int IdJugador)
+    { this.IdJugador = IdJugador; }
+
+    public void SetNombreJugador(String NombreJugador)
+    { this.Nombre = NombreJugador; }
+
+    public void SetApellidoJugador(String ApellidoJugador)
+    { this.Apellido = ApellidoJugador; }
+
+    public void SetEdadJugador(int EdadJugador)
+    { this.Edad = EdadJugador; }
+
+    //      GETTER
+
+    public int GetIdJugador()
+    {   return IdJugador; }
+
+    public String GetNombreJugador()
+    {   return Nombre; }
+
+    public String GetApellidoJugador()
+    {   return Apellido; }
+
+    public int GetEdadJugador()
+    {   return Edad; }
+
 }
