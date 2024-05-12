@@ -18,7 +18,6 @@ public class Main {
 
         while (Opcion != 5) {
 
-
             System.out.println("Menu de inicio");
             System.out.println(" ");
             System.out.println("Elige una opcion a realizar");
@@ -66,17 +65,20 @@ public class Main {
 
     public static void AgregarNuevoJugador()
     {
-        String Nombre, Apellido;
+        String Nombre, Apellido, Nacionalidad;
         int Edad, IdJugadorNew = 0, IndiceMax;
 
         System.out.println("***     AGREGAR JUGADOR    ***");
         System.out.println("");
-        System.out.println("Nombre Jugador: ");
+        System.out.println("Nombre del Jugador: ");
         Nombre = sc.nextLine();
-        System.out.println("Apellido Jugador: ");
+        System.out.println("Apellido del Jugador: ");
         Apellido = sc.nextLine();
-        System.out.println("Edad Jugador: ");
+        System.out.println("Nacionalidad del Jugador: ");
+        Nacionalidad =  sc.nextLine();
+        System.out.println("Edad del Jugador: ");
         Edad =  Integer.parseInt(sc.nextLine());
+
 
         if ( Jugadores.size() == 0)
         {
@@ -89,9 +91,11 @@ public class Main {
         }
 
         Jugador Aux = new Jugador();
+
         Aux.SetIdJugador(IdJugadorNew);
         Aux.SetNombreJugador(Nombre);
         Aux.SetApellidoJugador(Apellido);
+        Aux.SetNacionalidadJugador(Nacionalidad);
         Aux.SetEdadJugador(Edad);
 
         Jugadores.add(Aux);
@@ -103,19 +107,19 @@ public class Main {
     public static void ImprimirJugadores()
     {
         System.out.println("***     Lista de Jugadores    ***")   ;
-        System.out.println("Id Jugador      Nombre      Apellido        Edad  ");
+        System.out.println("Id Jugador      Nombre      Apellido        Nacionalidad        Edad  ");
         for (int i = 0; i < Jugadores.size(); i++)
         {
             System.out.println(Jugadores.get(i).GetIdJugador() + "      "
                             + Jugadores.get(i).GetNombreJugador() + "      "
                             + Jugadores.get(i).GetApellidoJugador() + "     "
+                            + Jugadores.get(i).GetNacionalidadJugador() + "     "
                             + Jugadores.get(i).GetEdadJugador());;
         }
         System.out.println("");
-
     }
 
-    public static boolean BuscarJugador()
+    public static Boolean BuscarJugador()
     {
         int IdJugadorAux = 0;
 
@@ -134,9 +138,9 @@ public class Main {
                 System.out.println("");
                 System.out.println("Nombre: " + Jugadores.get(i).GetNombreJugador());
                 System.out.println("Apellido: " + Jugadores.get(i).GetApellidoJugador());
+                System.out.println("Nacionalidad: " + Jugadores.get(i).GetNacionalidadJugador());
                 System.out.println("Edad: " + Jugadores.get(i).GetEdadJugador());
                 return true;
-
             }
         }
         return false;

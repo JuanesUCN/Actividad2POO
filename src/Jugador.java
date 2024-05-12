@@ -3,6 +3,7 @@ public class Jugador
     private int IdJugador;
     private String Nombre;
     private String Apellido;
+    private String Nacionalidad;
     private int Edad;
 
     public Jugador()
@@ -20,6 +21,9 @@ public class Jugador
     public void SetApellidoJugador(String ApellidoJugador)
     { this.Apellido = ApellidoJugador; }
 
+    public void SetNacionalidadJugador(String NacionalidadJugador)
+    { this.Nacionalidad = NacionalidadJugador; }
+
     public void SetEdadJugador(int EdadJugador)
     { this.Edad = EdadJugador; }
 
@@ -33,6 +37,9 @@ public class Jugador
 
     public String GetApellidoJugador()
     {   return Apellido; }
+
+    public String GetNacionalidadJugador()
+    {   return Nacionalidad; }
 
     public int GetEdadJugador()
     {   return Edad; }
